@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,11 +11,19 @@
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .navbarLinks ul li .active {
   color: white;
   background-color: #38c9bd;
   width: 100%;
+}
+
+.backgroundImage {
+  background-image: url("./assets//beach3.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
 }
