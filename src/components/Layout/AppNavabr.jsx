@@ -9,12 +9,12 @@ export default function AppNavabr() {
         </div>
         <div className="flex justify-center">
           <ul className="flex justify-center items-center border rounded bg-[#1d756e] w-fit">
-            <li className="flex justify-center items-center text-gray-300  w-[80px] rounded">
+            <li className="flex justify-center items-center text-gray-300  w-[100px] rounded">
               <NavLink className="px-5 py-2" to={"cities"}>
                 Cities
               </NavLink>
             </li>
-            <li className="flex justify-center items-center text-gray-300  w-[80px] rounded">
+            <li className="flex justify-center items-center text-gray-300  w-[100px] rounded">
               <NavLink className="px-5 py-2" to={"countries"}>
                 Countries
               </NavLink>

@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
     <>
       <div className="">
         <div className="h-[100vh] backgroundImage flex justify-center items-center">
           <div className="w-[100%] h-[100%]  flex justify-center items-center  shadow-2xl  bg-gray-900/30">
-            <div className="md:w-[600px] md:h-[450px] w-auto h-auto md:mx-0 mx-5 bg-white  rounded-[20px] shadow-2xl p-5 border-[10px] border-green-400">
+            <div className="md:w-[600px] md:h-[450px] w-auto h-auto md:mx-0 mx-5 bg-white  rounded-[10px] shadow-2xl p-5  border-green-400">
               <h1 className="md:text-[60px] text-[40px] capitalize font-semibold text-gray-600">
                 Summer Travel
               </h1>
@@ -20,9 +22,11 @@ export default function Home() {
                 officiis modi beatae eveniet, mollitia sit eius asperiores fuga
                 suscipit laborum ex ipsam?
               </p>
-              <button className="border w-[100%] mt-8 py-[15px] md:text-[30px] text-[20px] bg-green-600 rounded-lg text-white font-bold cursor-pointer shadow-xl hover:bg-green-500 duration-150">
-                Explore A City
-              </button>
+              <Link to={"/login"}>
+                <button className="border w-[100%] mt-8 py-[15px] md:text-[30px] text-[20px] bg-green-600 rounded-lg text-white font-bold cursor-pointer shadow-xl hover:bg-green-500 duration-150">
+                  Explore A City
+                </button>
+              </Link>
             </div>
           </div>
         </div>

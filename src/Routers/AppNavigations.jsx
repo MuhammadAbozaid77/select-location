@@ -15,21 +15,21 @@ export default function AppNavigations() {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   //   // -----------------------------------------------------------------------------------
-  //   useEffect(() => {
-  //     async function getCities() {
-  //       try {
-  //         setIsLoading(true);
-  //         const res = await fetch(`${Base_URL}`);
-  //         const data = await res.json();
-  //         setCities(data);
-  //       } catch (error) {
-  //         alert("Theree Is an Error Loading Data");
-  //       } finally {
-  //         setIsLoading(false);
-  //       }
+  // useEffect(() => {
+  //   async function getCities() {
+  //     try {
+  //       setIsLoading(true);
+  //       const res = await fetch(`${Base_URL}`);
+  //       const data = await res.json();
+  //       setCities(data);
+  //     } catch (error) {
+  //       alert("Theree Is an Error Loading Data");
+  //     } finally {
+  //       setIsLoading(false);
   //     }
-  //     getCities();
-  //   }, []);
+  //   }
+  //   getCities();
+  // }, []);
   //   // -----------------------------------------------------------------------------------
 
   return (
@@ -37,10 +37,10 @@ export default function AppNavigations() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Home />} />
-          <Route path="/app" element={<AppLayouts />}>
+          <Route path="app" element={<AppLayouts />}>
             <Route
               index
-              path="cities"
+              // path="cities"
               element={<Cities isLoading={isLoading} cities={cities} />}
             />
             <Route
