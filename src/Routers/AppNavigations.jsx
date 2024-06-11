@@ -9,27 +9,28 @@ import Cities from "./../pages/cities/Cities";
 import CityDetails from "./../pages/cities/CityDetails";
 import Countries from "./../pages/countries/Countries";
 import { useEffect, useState } from "react";
+import CityFrom from "../pages/form/CityFrom";
 const Base_URL = "http://localhost:9000/cities";
 
 export default function AppNavigations() {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   //   // -----------------------------------------------------------------------------------
-  // useEffect(() => {
-  //   async function getCities() {
-  //     try {
-  //       setIsLoading(true);
-  //       const res = await fetch(`${Base_URL}`);
-  //       const data = await res.json();
-  //       setCities(data);
-  //     } catch (error) {
-  //       alert("Theree Is an Error Loading Data");
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   }
-  //   getCities();
-  // }, []);
+  useEffect(() => {
+    async function getCities() {
+      try {
+        setIsLoading(true);
+        const res = await fetch(`${Base_URL}`);
+        const data = await res.json();
+        setCities(data);
+      } catch (error) {
+        alert("Theree Is an Error Loading Data");
+      } finally {
+        setIsLoading(false);
+      }
+    }
+    getCities();
+  }, []);
   //   // -----------------------------------------------------------------------------------
 
   return (
@@ -40,7 +41,6 @@ export default function AppNavigations() {
           <Route path="app" element={<AppLayouts />}>
             <Route
               index
-              // path="cities"
               element={<Cities isLoading={isLoading} cities={cities} />}
             />
             <Route
@@ -53,6 +53,7 @@ export default function AppNavigations() {
               path="countries"
               element={<Countries isLoading={isLoading} cities={cities} />}
             />
+            <Route path="form" element={<CityFrom />} />
           </Route>
           <Route path="product" element={<Product />} />
           <Route path="pricing" element={<Pricing />} />
