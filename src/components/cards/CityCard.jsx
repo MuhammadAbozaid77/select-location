@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { IoClose } from "react-icons/io5";
 
 export default function CityCard({ item }) {
   console.log(item);
@@ -23,7 +24,7 @@ export default function CityCard({ item }) {
           </div>
           <div className=" text-white w-[150px]">{formatDate(item.date)}</div>
           <div className="w-[30px] h-[30px] rounded-full bg-red-900 hover:bg-red-700 duration-150 text-white flex justify-center items-center text-[15px] font-semibold cursor-pointer">
-            X
+            <IoClose size={20} />
           </div>
         </div>
       </Link>

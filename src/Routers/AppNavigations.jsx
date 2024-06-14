@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import AppLayouts from "./AppLayouts";
 import PageNotFound from "./../components/Ui/PageNotFound";
 import Home from "./../pages/home/Home";
@@ -41,7 +41,8 @@ export default function AppNavigations() {
           <Route path="app" element={<AppLayouts />}>
             <Route
               index
-              element={<Cities isLoading={isLoading} cities={cities} />}
+              element={<Navigate replace to={"cities"} />}
+              // element={<Cities isLoading={isLoading} cities={cities} />}
             />
             <Route
               path="cities"
