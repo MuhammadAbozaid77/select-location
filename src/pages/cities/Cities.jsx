@@ -1,9 +1,10 @@
-import { useSearchParams } from "react-router-dom";
 import NoData from "../../components/Ui/NoData";
 import SpinnerLoading from "../../components/Ui/spinnerLoading/SpinnerLoading";
 import CityCard from "../../components/cards/CityCard";
+import useCities from "../../hooks/useCities";
 
-export default function Cities({ isLoading, cities }) {
+export default function Cities() {
+  const { isLoading, cities } = useCities();
   if (isLoading) {
     return (
       <>

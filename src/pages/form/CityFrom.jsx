@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 export default function CityFrom() {
   const navigate = useNavigate();
   const [cityName, setCityName] = useState("");
-  const [country, setCountry] = useState("");
+  // const [country, setCountry] = useState("");
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState("");
 
@@ -81,10 +81,10 @@ export default function CityFrom() {
             <Button
               myStyle={"bg-green-800 hover:bg-green-900 duration-150"}
               icon={<FaPlus size={20} />}
-              // onClick={(e) => {
-              //   e.preventDefault();
-              //   navigate(+1);
-              // }}
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(+1);
+              }}
             >
               Add
             </Button>

@@ -1,8 +1,11 @@
 import NoData from "../../components/Ui/NoData";
 import SpinnerLoading from "../../components/Ui/spinnerLoading/SpinnerLoading";
 import CountryCard from "../../components/cards/CountryCard";
+import useCities from "../../hooks/useCities";
 
-export default function Countries({ isLoading, cities }) {
+export default function Countries() {
+  const { isLoading, cities } = useCities();
+
   if (isLoading) {
     return (
       <>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+@import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 
 @tailwind base;
 @tailwind components;
@@ -25,4 +26,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+.leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
+  height: 100%;
 }
