@@ -1,7 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useCities from "../../hooks/useCities";
 import { useEffect } from "react";
 import SpinnerLoading from "../../components/Ui/spinnerLoading/SpinnerLoading";
+import Button from "../../components/Ui/Button";
+import { FaChevronLeft } from "react-icons/fa";
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -11,6 +13,7 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 export default function CityDetails() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const { currentCity, getCityDetails, isLoading } = useCities();
 
@@ -33,7 +36,7 @@ export default function CityDetails() {
 
   return (
     <>
-      <div className="text-white p-5">
+      <div className="text-white p-5 bg-black/50 mt-[20px] rounded-[5px]">
         <div className="flex justify-start items-center mb-2">
           <h6 className="me-2">City name</h6>
           <h3 className="text-yellow-500">
@@ -63,6 +66,17 @@ export default function CityDetails() {
             Check out {cityName} on Wikipedia &rarr;
           </a>
         </div>
+
+        <Button
+          myStyle={"bg-red-800 hover:bg-red-900 duration-150 mt-[30px]"}
+          icon={<FaChevronLeft size={20} />}
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(-1);
+          }}
+        >
+          Back
+        </Button>
       </div>
     </>
   );

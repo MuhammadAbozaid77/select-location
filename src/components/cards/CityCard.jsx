@@ -4,7 +4,8 @@ import useCities from "../../hooks/useCities";
 
 export default function CityCard({ item }) {
   // console.log(item);
-  const { currentCity } = useCities();
+  const { currentCity, handelDeleteCity } = useCities();
+
   const formatDate = (date) =>
     new Intl.DateTimeFormat("en", {
       day: "numeric",
@@ -14,6 +15,10 @@ export default function CityCard({ item }) {
 
   const { id, position, cityName, emoji, date } = item;
 
+  const handelDelete = (e) => {
+    e.preventDefault();
+    handelDeleteCity(id);
+  };
   //
   return (
     <>
@@ -30,7 +35,10 @@ export default function CityCard({ item }) {
             </div>
           </div>
           <div className=" text-white w-[150px]">{formatDate(date)}</div>
-          <div className="w-[30px] h-[30px] rounded-full bg-red-900 hover:bg-red-700 duration-150 text-white flex justify-center items-center text-[15px] font-semibold cursor-pointer">
+          <div
+            onClick={handelDelete}
+            className="w-[30px] h-[30px] rounded-full bg-red-900 hover:bg-red-700 duration-150 text-white flex justify-center items-center text-[15px] font-semibold cursor-pointer"
+          >
             <IoClose size={20} />
           </div>
         </div>

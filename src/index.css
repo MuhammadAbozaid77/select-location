@@ -30,4 +30,29 @@ body {
 
 .leaflet-container.leaflet-touch-drag.leaflet-touch-zoom {
   height: 100%;
+  background-color: black;
+}
+
+/* Here we want to style classes that are coming from leaflet. So we want CSS Modules to give us the ACTUAL classnames, not to add some random ID to them, because then they won't match the classnames defined inside the map. The solution is to define these classes as GLOBAL */
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 20px;
+  margin: 15px;
+  padding: 10px;
+  background-color: #267fca;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 200px;
+}
+
+.leaflet-popup .leaflet-popup-content span:first-child {
+  font-size: 20px;
+  color: rgb(255, 196, 0);
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: white;
 }

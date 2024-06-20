@@ -1,40 +1,52 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
+      "id": "12fdf4fc-4ccc-4964-98be-a7f94dd06eee",
+      "cityName": "Bunuel",
       "country": "Spain",
       "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
+      "date": "2024-06-20T11:39:31.070Z",
+      "notes": "ggg",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
+        "lat": "41.986388099382054",
+        "lng": "-1.4456147859083557"
+      }
     },
     {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "id": "a1a6abee-1806-4af4-9e73-5a9ac19685d4",
+      "cityName": "Coust",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-06-20T11:41:06.386Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
+        "lat": "46.69684826518165",
+        "lng": "2.598421600796908"
+      }
+    },
+    {
+      "id": "fea5b966-8275-4602-ad04-575d3e831d84",
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-06-20T12:20:57.648Z",
+      "notes": "ccccc",
+      "position": {
+        "lat": "48.852311686653884",
+        "lng": "2.361105106532318"
+      }
+    },
+    {
+      "id": "fada4bfe-f90d-4c64-8ad3-bbe473e67345",
+      "cityName": "Marsa Maţruḩ",
+      "country": "Egypt",
+      "emoji": "🇪🇬",
+      "date": "2024-06-20T23:18:28.163Z",
+      "notes": "OKKKK",
+      "position": {
+        "lat": "28.597738867410964",
+        "lng": "27.14772633954003"
+      }
     }
   ]
 }

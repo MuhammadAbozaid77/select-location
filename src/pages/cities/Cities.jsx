@@ -8,7 +8,7 @@ export default function Cities() {
   if (isLoading) {
     return (
       <>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center h-[400px] bg-black/80">
           <SpinnerLoading />
         </div>
       </>
